@@ -1,9 +1,6 @@
 {
   "name": "furry-system",
-  "engines": {
-    "node": "16.x",
-    "npm": "^6.x"
-  },
+
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",

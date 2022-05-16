@@ -3,10 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
-    "engines": {
-        "node": "16.x",
-        "npm": "^6.x"
-      },
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
