@@ -12,3 +12,5 @@ This single-page application is a text editor that runs within a browser. This t
 
 ## LINKS
 
+Heroku: https://furry-system.herokuapp.com/
+Github: https://github.com/Wbgc728/furry-system
