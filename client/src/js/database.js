@@ -3,7 +3,7 @@ import { openDB } from 'idb';
 const initdb = async () =>
   openDB('text', 1, {
     upgrade(db) {
-      if (db.objectStoreNames.contains('jate')) {
+      if (db.objectStoreNames.contains('text')) {
         console.log('text database already exists');
         return;
       }
