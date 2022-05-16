@@ -7,7 +7,7 @@ const initdb = async () =>
         console.log('text database already exists');
         return;
       }
-      db.createObjectStore('text', { keyPath: 'id', autoIncrement: true });
+      db.createObjectStore('text', { autoIncrement: true });
       console.log('text database created');
     },
   });
@@ -23,10 +23,11 @@ export const putDb = async (content)  => {
   // Open up the desired object store.
   const store = tx.objectStore('text');
   // Use the .add() method on the store and pass in the content.
-  const request = store.put({ id: id, content: content });
+  const request = store.put({content: content });
   // Get confirmation of the request.
   const result = await request;
   console.log('🚀 - Content saved to the database', result);
+  return result
 };
 ;
 
@@ -44,7 +45,8 @@ export const getDb = async () => {
   // Get confirmation of the request.
   const result = await request;
   console.log('result.value', result);
-  return result;
+  return result
+
 };
 
 initdb();
