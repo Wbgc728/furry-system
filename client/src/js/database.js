@@ -14,7 +14,7 @@ const initdb = async () =>
 
 // export const putDb = async (content) => console.error('putDb not implemented');
 // Export a function PUT to the database.
-export const putDb = async (id, content)  => {
+export const putDb = async (content)  => {
   console.log('PUT request to the database');
   // Create a connection to the database database and version we want to use.
   const textDb = await openDB('text', 1);
@@ -23,7 +23,7 @@ export const putDb = async (id, content)  => {
   // Open up the desired object store.
   const store = tx.objectStore('text');
   // Use the .add() method on the store and pass in the content.
-  const request = store.add({ id: id, content: content });
+  const request = store.put({ id: id, content: content });
   // Get confirmation of the request.
   const result = await request;
   console.log('🚀 - Content saved to the database', result);
